@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        System.out.println("10. Write a Java program to create multiple threads\n");
-        System.out.println("11. Write a Java program to demonstrate the Thread.join() method\n");
+        System.out.println("10. Write a Java program to create multiple threads");
+        System.out.println("11. Write a Java program to demonstrate the Thread.join() method");
         System.out.println("12. Write a Java program to sleep a thread\n");
 
         for (int i = 1; i < 6; i++) {
@@ -22,10 +22,10 @@ public class Main {
 
         thread1.start();
         thread2.start();
+        System.out.println("Active Threads in Thread Group : " + threadGroup.activeCount());
+        threadGroup.interrupt();
         thread1.join();
         thread2.join();
-        System.out.println("Active Threads in Thread Group : " + threadGroup.activeCount());
-        //threadGroup.destroy();
 
         System.out.println();
         System.out.println("+------------------------------------------------------+");
